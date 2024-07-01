@@ -53,12 +53,12 @@ jobs:
 
     - name: Pull Docker image
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@3.197.67.34 'sudo docker pull yagoleonel/nodejsapp:latest'
+        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@3.67.197.34 'sudo docker pull yagoleonel/nodejsapp:latest'
 
     - name: Stop running container
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@3.197.67.34 'sudo docker stop nodejsapp || true'
-        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@3.197.67.34 'sudo docker rm nodejsapp || true'
+        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@3.67.197.34 'sudo docker stop nodejsapp || true'
+        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@3.67.197.34 'sudo docker rm nodejsapp || true'
 
     - name: Run new container
       run: |
