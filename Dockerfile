@@ -1,7 +1,7 @@
 FROM node:20-alpine
 
 # Create and set the working directory
-WORKDIR /usr/src/app
+WORKDIR /home/app
 
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
