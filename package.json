@@ -1,0 +1,14 @@
+{
+  "name": "ci-cd-gh-actions-aws",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
