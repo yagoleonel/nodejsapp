@@ -25,6 +25,8 @@
 
 # 2 Configure EC2 instance
 
+## Configure IAM EC2 role to access SSM (AmazonSSMMManagedInstanceCore )
+
 ## Configure ec2 user data
 
 Copy and paste from /aws-setup/ec2-user-data.sh in ec2 user-data field (reload the instance if already running)
