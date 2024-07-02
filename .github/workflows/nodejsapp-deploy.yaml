@@ -52,7 +52,7 @@ jobs:
             --document-name "AWS-RunShellScript" \
             --comment "Running deploy script" \
             --targets "Key=tag:Name,Values=nodejsapp" \
-            --parameters commands=["/home/ec2-user/deploy-app.sh"]
+            --parameters commands=["/home/ec2-user/deploy-app.sh > /var/log/deploy-app.log 2>&1"] \
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
