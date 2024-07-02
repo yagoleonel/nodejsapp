@@ -51,7 +51,7 @@ jobs:
           aws ssm send-command \
             --document-name "AWS-RunShellScript" \
             --comment "Running deploy script" \
-            --instance-ids="i-08f69ee8c8f2c69a1" \
+            --targets "Key=tag:Name,Values=nodejs-app" \
             --parameters commands=["/home/ec2-user/deploy-app.sh > /var/log/deploy-app.log"] \
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
