@@ -52,6 +52,7 @@ jobs:
           aws ssm send-command \
             --document-name "AWS-RunShellScript" \
             --comment "Running deploy script" \
+            --targets "Key=tag:Name,Values=nodejsapp" \
             --parameters commands=["/home/ec2-user/update-container.sh"]
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
