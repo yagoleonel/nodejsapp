@@ -5,7 +5,7 @@ const port = 3000;
 
 app.get('/', (req, res) => {
   res.send({
-    message: 'Nodejs APP!',
+    message: 'Nodejs APP test run!',
   });
 });
 
