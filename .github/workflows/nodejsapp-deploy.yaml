@@ -53,7 +53,9 @@ jobs:
             --document-name "AWS-RunShellScript" \
             --comment "Running deploy script" \
             --targets "Key=tag:Name,Values=nodejs-app" \
-            --parameters commands=["/home/ec2-user/deploy-app.sh > /var/log/deploy-app.log"] \
+            --parameters commands=["/home/ec2-user/deploy-app.sh ${{ env.DOCKERHUB_USERNAME }} ${{ env.DOCKERHUB_TOKEN }} > /var/log/deploy-app.log"] \
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}      
